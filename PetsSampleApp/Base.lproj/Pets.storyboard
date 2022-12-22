@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRU-Xc-SjL">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qye-jY-pNb">
+            <objects>
+                <navigationController id="rRU-Xc-SjL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hTI-N4-vwV">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dCl-ng-KRl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KL4-RF-kSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="-9"/>
+        </scene>
+        <!--Pets View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PetsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PetsViewController" customModule="PetsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bPL-G8-xQh">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetsTableViewCell" id="vtC-ct-aVC" customClass="PetsTableViewCell" customModule="PetsSampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vtC-ct-aVC" id="wQr-8F-QeP">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2DZ-mN-2x1">
+                                                    <rect key="frame" x="16" y="-3.3333333333333321" width="50" height="50.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="gfc-yF-8cn"/>
+                                                        <constraint firstAttribute="width" constant="50" id="ikH-gg-tdA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqp-l7-f8W">
+                                                    <rect key="frame" x="76" y="7.0000000000000018" width="298" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2DZ-mN-2x1" firstAttribute="leading" secondItem="wQr-8F-QeP" secondAttribute="leading" constant="16" id="ALi-Je-7Ud"/>
+                                                <constraint firstAttribute="trailing" secondItem="uqp-l7-f8W" secondAttribute="trailing" constant="16" id="DIf-jf-YSR"/>
+                                                <constraint firstItem="2DZ-mN-2x1" firstAttribute="centerY" secondItem="wQr-8F-QeP" secondAttribute="centerY" id="SHA-aO-fts"/>
+                                                <constraint firstItem="uqp-l7-f8W" firstAttribute="leading" secondItem="2DZ-mN-2x1" secondAttribute="trailing" constant="10" id="cXO-ek-a2E"/>
+                                                <constraint firstItem="uqp-l7-f8W" firstAttribute="top" secondItem="2DZ-mN-2x1" secondAttribute="top" constant="10" id="gEK-4R-aZi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="petImageView" destination="2DZ-mN-2x1" id="MlY-GQ-qf9"/>
+                                            <outlet property="petsLabel" destination="uqp-l7-f8W" id="XYy-Qw-hyv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Aox-bn-1hq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fLu-HB-fse"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bPL-G8-xQh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2zR-cc-1nO"/>
+                            <constraint firstItem="bPL-G8-xQh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8zW-Rp-SfD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bPL-G8-xQh" secondAttribute="bottom" id="rBI-P9-mfw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPL-G8-xQh" secondAttribute="trailing" id="ybb-YE-4h4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ufg-0M-3dJ"/>
+                    <connections>
+                        <outlet property="petsTableView" destination="bPL-G8-xQh" id="aem-aD-p1W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-2"/>
+        </scene>
+        <!--Pet Details View Controller-->
+        <scene sceneID="Wmt-CA-EMT">
+            <objects>
+                <viewController storyboardIdentifier="PetDetailsViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6AJ-Iw-v5r" customClass="PetDetailsViewController" customModule="PetsSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Idn-NE-Izn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSp-UC-oNq">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MMd-EY-hFc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MMd-EY-hFc" firstAttribute="trailing" secondItem="YSp-UC-oNq" secondAttribute="trailing" id="MTX-tp-4jI"/>
+                            <constraint firstItem="YSp-UC-oNq" firstAttribute="top" secondItem="MMd-EY-hFc" secondAttribute="top" id="QIb-hh-i4J"/>
+                            <constraint firstItem="YSp-UC-oNq" firstAttribute="leading" secondItem="MMd-EY-hFc" secondAttribute="leading" id="ffZ-Ff-gsY"/>
+                            <constraint firstItem="MMd-EY-hFc" firstAttribute="bottom" secondItem="YSp-UC-oNq" secondAttribute="bottom" id="t97-iy-H3e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="petWebView" destination="YSp-UC-oNq" id="WUc-da-uzK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwR-wf-U9k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

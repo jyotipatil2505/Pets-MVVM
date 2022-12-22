@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  PetsSampleApp
+
+  Created by Jyoti Mitkar on 22/12/22.
+  
+*/
+
+"restricted_access_in_non_working_hours" = "You are restricted to access the content in non-working hours.";
+"pets" = "Pets";
+"pets_info" = "Pets Info";
+"ok" = "Ok";
+
